@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .dashboard, .property, .devices, .login {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>Your Web Page</title>
+</head>
+<body>
+
+    <header>
+        <h1>Your Website</h1>
+    </header>
+
+    <nav>
+        <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+        <a href="#" onclick="showPage('property')">Property</a>
+        <a href="#" onclick="showPage('devices')">Devices</a>
+        <a href="#" onclick="showPage('login')">Login</a>
+    </nav>
+
+    <section class="dashboard active">
+        <h2>Dashboard Page</h2>
+        <!-- Add your dashboard content here -->
+    </section>
+
+    <section class="property">
+        <h2>Property Page</h2>
+        <!-- Add your property content here -->
+    </section>
+
+    <section class="devices">
+        <h2>Devices Page</h2>
+        <!-- Add your devices content here -->
+    </section>
+
+    <section class="login">
+        <h2>Login Page</h2>
+        <!-- Add your login content here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(page) {
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            document.querySelector(`.${page}`).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
